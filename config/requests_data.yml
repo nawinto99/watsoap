@@ -1,0 +1,46 @@
+GENERIC:
+  doc: >
+    This is generic section where endpoints picks the common information for all the API endpoints
+  payload: |
+    {
+    "body": "bar",
+    "userId": 1
+    }
+  headers: |
+    {
+    "Content-Length": "253",
+    "Content-Type": "application/json",
+    "x-pretty-print": "2"
+    }
+
+JSON_PLACE_HOLDER:
+  base_url: "https://jsonplaceholder.typicode.com/posts"
+  method: "POST"
+  headers: |
+    {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  payload: |
+    {
+    "title": "foo",
+    "body": "bar",
+    "userId": 1
+    }
+  params: ""
+  auth_type: "BASIC"
+  auth_env_name: "BASIC_AUTH_GENERIC"
+
+MOCKBIN:
+  base_url: "http://mockbin.com/request"
+  method: "POST"
+  headers: "GENERIC"
+  payload: |
+    {
+    "foo": "bar"
+    }
+  params: |
+    {
+    "foo":["bar","baz"]
+    }
+  auth_type: "BASIC"
+  auth_env_name: "MOCKBIN"

@@ -1,0 +1,3 @@
+LOG_FILE_LOCATION: ~/logs/watsoap/
+HEALTH_REPORT_LOCATION: ~/logs/watsoap/
+HEALTH_REPORT_TYPE: CSV
