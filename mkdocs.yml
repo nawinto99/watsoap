@@ -1,5 +1,5 @@
 # Project information
-site_name: Whatsoap
+site_name: WATSOAP
 site_url: https://nawinto99.github.io/watsoap/
 site_author: Naveen Thurimerla
 site_description: >-
@@ -98,4 +98,4 @@ markdown_extensions:
 
 
 nav:
-  - Home: index.md
+  - index.md
