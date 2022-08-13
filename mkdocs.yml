@@ -1,0 +1,101 @@
+# Project information
+site_name: Whatsoap
+site_url: nawinto99.github.io/watsoap/
+site_author: Naveen Thurimerla
+site_description: >-
+    WATSOAP (What's The Status Of API) is a API health-checking monitoring tool
+# Repository
+repo_name: nawinto99/watsoap
+repo_url: https://github.com/nawinto99/watsoap
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2022 Naveen Thurimerla
+
+# Configuration
+theme:
+    name: "material"
+    logo: assets/favicon.png
+
+    # Static files
+    static_templates:
+        - 404.html
+
+    # Don't include MkDocs' JavaScript
+    include_search_page: false
+    search_index_only: true
+
+    # Default values, taken from mkdocs_theme.yml
+    language: en
+    features:
+        - content.tabs.link
+        # - navigation.instant
+        - navigation.sections
+        - navigation.tabs
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+    palette:
+        - scheme: default
+          primary: indigo
+          accent: amber
+          toggle:
+              icon: material/weather-night
+              name: Switch to dark mode
+        - scheme: slate
+          primary: orange
+          accent: blue
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to light mode
+    font:
+        text: Roboto
+        code: Roboto Mono
+    favicon: assets/favicon.png
+    icon:
+        logo: logo
+
+# Plugins
+plugins:
+    - include-markdown
+    - search
+
+# Extensions
+markdown_extensions:
+    - admonition
+    - abbr
+    - attr_list
+    - def_list
+    - footnotes
+    - meta
+    - md_in_html
+    - toc:
+          permalink: true
+    - pymdownx.arithmatex:
+          generic: true
+    - pymdownx.betterem:
+          smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.highlight
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+          repo_url_shorthand: true
+          user: squidfunk
+          repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.tabbed
+    - pymdownx.tasklist:
+          custom_checkbox: true
+    - pymdownx.tilde
+    - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg # Page tree
+
+nav:
+    - Home: index.md
+   
