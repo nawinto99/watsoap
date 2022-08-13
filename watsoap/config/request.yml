@@ -1,9 +1,0 @@
-endpoints: |
-    [ 
-      {
-      "name": "value1"
-      },
-      {
-      "name": "value2"
-      }
-    ]
