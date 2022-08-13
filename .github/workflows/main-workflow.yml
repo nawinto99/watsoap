@@ -35,7 +35,7 @@ jobs:
 
     - name: Build docs
       run: |
-        poetry install -E docs
+        poetry install -E doc
         poetry run mkdocs build
 
     - name: Show temporary files
