@@ -44,7 +44,6 @@ def start(config_dir, env, app_config):
         for endpoint in endpoints:
             data = requests_data[endpoint]
             base_url = data["base_url"]
-            print(base_url)
             method = data["method"]
             headers = get_headers(data["headers"], requests_data["GENERIC"])
             auth = get_auth_details(data["auth_type"], data["auth_env_name"], env)
