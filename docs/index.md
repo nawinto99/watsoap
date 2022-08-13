@@ -2,7 +2,7 @@
 
 _WATSOAP (What's The Status Of API) is a API health-checking monitoring tool._
 
-![alt text](assets/images/watsoap.png){ align=right }
+![alt text](./assets/watsoap.png){ align=right }
 
 # Getting started
 
