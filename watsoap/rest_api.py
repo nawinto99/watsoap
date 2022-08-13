@@ -25,5 +25,6 @@ def call_api(method, base_url, payload, headers, querystring, auth):
         res["status"] = "Not Found"
         res["status_code"] = 404
         res["response_time_seconds"] = 0
+        pass
 
     return res
