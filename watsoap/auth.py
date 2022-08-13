@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from json import loads
 
 from requests.auth import HTTPBasicAuth
