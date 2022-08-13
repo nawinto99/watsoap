@@ -32,3 +32,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/nawinto99/watsoap/issues"
+
+[tool.poetry.scripts]
+watsoap = "app"
