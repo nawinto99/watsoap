@@ -6,41 +6,54 @@ WATSOAP (What's The Status Of API) is a API health-checking monitoring tool
 
 ![gitoxy](./docs/assets/watsoap.png)
 
-# Getting started
 
-## Prerequisites
+# Purpose
+Manually monitoring the health of APIs is a time-consuming and painful task. This tool purpose is to automatically monitor the health of APIs.
 
-- Install [git](https://git-scm.com/)
-- Install [Python](https://www.python.org/)
+# Features
+- Collects the current health status of configured APIs.
+- Generates the health status reports in a variety of file formats.
 
-## Installation
+# Prerequisite
 
-### with git
+- Install [git](https://git-scm.com/), If it is already installed, ignore it.
+- Install [Python](https://www.python.org/), If it is already installed, ignore it.
+- If [Poetry](https://python-poetry.org/docs/) is not already installed on your local machine, proceed as follows.
+```
+    $ python -m pip install --upgrade pip
+    $ pip install poetry
+```
 
-1. Clone repository to your local
+# Setup 
+
+## With GIT
+
+1. Clone this repository to your local machine.
 
 ```
     $ git https://github.com/nawinto99/watsoap.git
 ```
 
-1. Ensure [poetry](https://python-poetry.org/docs/) is installed, if not follow below.
-
+2. Change the working directory as follows.
 ```
     $ cd watsoap
-    $ python -m pip install --upgrade pip
-    $ pip install poetry
 ```
-
-1. Install dependencies and start your virtualenv:
+3. Run following command which will install the necessary dependencies.
 
 ```
     $ poetry install
-    $ poetry shell
 ```
+4. Rename the .env.dummy file in the config folder to .env.
 
 # Usage
 
-## Modify Configuration Files
+## Update the below configuration files in the config folder
+
+1. requests.yml -> Stores the list of requests to perform health checks.
+2. requests_data.yml -> Stores the information needed to trigger the API
+3. .env -> Stores the senstive information like 
+
+
 
 1. Modify the requests configuration file, add list of endpoint names to mintor the health.
 
@@ -115,7 +128,6 @@ MOCKBIN:
   auth_env_name: "MOCKBIN"
 ```
 3. Modify the environmental configuration file, create the environmental variable name as same as mentioned in step #2, auth_env_name .
-    > rename the .env.dummy to .env 
     > /config/.env
     
 #### Example:
