@@ -355,24 +355,21 @@
 <li>Rename the .env.dummy file in the config folder to .env.</li>
 </ol>
 <h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
-<h2 id="update-the-below-configuration-files-in-the-config-folder">Update the below configuration files in the config folder<a class="headerlink" href="#update-the-below-configuration-files-in-the-config-folder" title="Permanent link">&para;</a></h2>
 <ol>
-<li>requests.yml -&gt; Stores the list of requests to perform health checks.</li>
-<li>requests_data.yml -&gt; Stores the information needed to trigger the API</li>
-<li>
-<p>.env -&gt; Stores the senstive information like </p>
-</li>
-<li>
-<p>Modify the requests configuration file, add list of endpoint names to mintor the health.</p>
-</li>
+<li><strong>requests.yml</strong> : This file contains a list of requests, request's name should be unique in the list.</li>
+<li><strong>requests_data.yml</strong> : This file contains the data required to initiate each request. Create one dictionary object for each request, and the name should exactly match the map key name mentioned in step one.</li>
+<li><strong>.env</strong>: This file contains the Tokens, API keys, usernames and passwords, and other sensitive information.</li>
 </ol>
-<blockquote>
-<p>/config/requests.yml</p>
-</blockquote>
-<h4 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
-<pre><code>    endpoints: [ 
-      &quot;MOCKBIN&quot;, &quot;JSON_PLACE_HOLDER&quot;
-    ]
+<h3 id="update-requestsyml">Update <strong>requests.yml</strong><a class="headerlink" href="#update-requestsyml" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Create <strong>endpoints</strong> the list's map key name.</li>
+<li>The name of the request should be unique in the list.</li>
+<li>It is recommended that capital letters and underscores be used for separate letters.</li>
+</ol>
+<h6 id="sample">Sample:<a class="headerlink" href="#sample" title="Permanent link">&para;</a></h6>
+<pre><code>endpoints:
+  - MOCKBIN
+  - JSON_PLACE_HOLDER
 </code></pre>
 <ol>
 <li>Modify the requests data configuration file. Make sure to match the endpoint names as mentioned in step <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/1" title="GitHub Issue: squidfunk/mkdocs-material #1">#1</a>. For each endpoint, create following list of keys. If you have common data for multiple endpoints, declare the GENERIC path and mention value as GENERIC to refer the value from GENERIC for each endpoint.</li>
@@ -388,7 +385,7 @@
 <li><strong>auth_type:</strong> <em>Authentication types, select one from following list <strong>['NO-AUTH','BASIC', 'API-KEY'].</strong></em></li>
 <li><strong>auth_env_name:</strong> <em>Authentication Environment Variable name, refer step <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/3" title="GitHub Issue: squidfunk/mkdocs-material #3">#3</a> for more details.</em></li>
 </ul>
-<h4 id="example_1">Example:<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<h4 id="example">Example:<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <pre><code>GENERIC:
   doc: &gt;
     This is generic section where endpoints picks the common information for all the API endpoints
@@ -440,7 +437,7 @@ MOCKBIN:
 <li>Modify the environmental configuration file, create the environmental variable name as same as mentioned in step <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/2" title="GitHub Issue: squidfunk/mkdocs-material #2">#2</a>, auth_env_name .
     &gt; /config/.env</li>
 </ol>
-<h4 id="example_2">Example:<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<h4 id="example_1">Example:<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <pre><code>DOMAIN=example.org
 ADMIN_EMAIL=admin@${DOMAIN}
 ROOT_URL=${DOMAIN}/app
