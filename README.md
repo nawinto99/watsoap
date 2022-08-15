@@ -46,26 +46,24 @@ Manually monitoring the health of APIs is a time-consuming and painful task. Thi
 4. Rename the .env.dummy file in the config folder to .env.
 
 # Usage
-
-## Update the below configuration files in the config folder
-
-1. requests.yml -> Stores the list of requests to perform health checks.
-2. requests_data.yml -> Stores the information needed to trigger the API
-3. .env -> Stores the senstive information like 
+1. **requests.yml** : This file contains a list of requests, request's name should be unique in the list.
+2. **requests_data.yml** : This file contains the data required to initiate each request. Create one dictionary object for each request, and the name should exactly match the map key name mentioned in step one.
+3. **.env**: This file contains the Tokens, API keys, usernames and passwords, and other sensitive information.
 
 
+### Update **requests.yml**
+1. Create **endpoints** the list's map key name.
+2. The name of the request should be unique in the list.
+3. It is recommended that capital letters and underscores be used for separate letters.
 
-1. Modify the requests configuration file, add list of endpoint names to mintor the health.
-
-   > /config/requests.yml
-
-#### Example:
+###### Sample:
 
 ```
-    endpoints: [ 
-      "MOCKBIN", "JSON_PLACE_HOLDER"
-    ]
+endpoints:
+  - MOCKBIN
+  - JSON_PLACE_HOLDER
 ```
+
 2. Modify the requests data configuration file. Make sure to match the endpoint names as mentioned in step #1. For each endpoint, create following list of keys. If you have common data for multiple endpoints, declare the GENERIC path and mention value as GENERIC to refer the value from GENERIC for each endpoint.
 
    > /config/requests_data.yml
