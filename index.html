@@ -318,36 +318,53 @@
 <p><a href="https://github.com/nawinto99/gitoxy/actions/workflows/codeql-analysis.yml"><img alt="CodeQL" src="https://github.com/nawinto99/gitoxy/actions/workflows/codeql-analysis.yml/badge.svg?branch=main" /></a></p>
 <p>WATSOAP (What's The Status Of API) is a API health-checking monitoring tool</p>
 <p><img alt="gitoxy" src="assets/watsoap.png" /></p>
-<h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h1 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h1>
+<p>Manually monitoring the health of APIs is a time-consuming and painful task. This tool purpose is to automatically monitor the health of APIs.</p>
+<h1 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Install <a href="https://git-scm.com/">git</a></li>
-<li>Install <a href="https://www.python.org/">Python</a></li>
+<li>Collects the current health status of configured APIs.</li>
+<li>Generates the health status reports in a variety of file formats.</li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<h3 id="with-git">with git<a class="headerlink" href="#with-git" title="Permanent link">&para;</a></h3>
+<h1 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Install <a href="https://git-scm.com/">git</a>, If it is already installed, ignore it.</li>
+<li>Install <a href="https://www.python.org/">Python</a>, If it is already installed, ignore it.</li>
+<li>If <a href="https://python-poetry.org/docs/">Poetry</a> is not already installed on your local machine, proceed as follows.</li>
+</ul>
+<pre><code>    $ python -m pip install --upgrade pip
+    $ pip install poetry
+</code></pre>
+<h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
+<h2 id="with-git">With GIT<a class="headerlink" href="#with-git" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Clone repository to your local</li>
+<li>Clone this repository to your local machine.</li>
 </ol>
 <pre><code>    $ git https://github.com/nawinto99/watsoap.git
 </code></pre>
 <ol>
-<li>Ensure <a href="https://python-poetry.org/docs/">poetry</a> is installed, if not follow below.</li>
+<li>Change the working directory as follows.</li>
 </ol>
 <pre><code>    $ cd watsoap
-    $ python -m pip install --upgrade pip
-    $ pip install poetry
 </code></pre>
 <ol>
-<li>Install dependencies and start your virtualenv:</li>
+<li>Run following command which will install the necessary dependencies.</li>
 </ol>
 <pre><code>    $ poetry install
-    $ poetry shell
 </code></pre>
-<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
-<h2 id="modify-configuration-files">Modify Configuration Files<a class="headerlink" href="#modify-configuration-files" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Modify the requests configuration file, add list of endpoint names to mintor the health.</li>
+<li>Rename the .env.dummy file in the config folder to .env.</li>
+</ol>
+<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
+<h2 id="update-the-below-configuration-files-in-the-config-folder">Update the below configuration files in the config folder<a class="headerlink" href="#update-the-below-configuration-files-in-the-config-folder" title="Permanent link">&para;</a></h2>
+<ol>
+<li>requests.yml -&gt; Stores the list of requests to perform health checks.</li>
+<li>requests_data.yml -&gt; Stores the information needed to trigger the API</li>
+<li>
+<p>.env -&gt; Stores the senstive information like </p>
+</li>
+<li>
+<p>Modify the requests configuration file, add list of endpoint names to mintor the health.</p>
+</li>
 </ol>
 <blockquote>
 <p>/config/requests.yml</p>
@@ -421,7 +438,6 @@ MOCKBIN:
 </code></pre>
 <ol>
 <li>Modify the environmental configuration file, create the environmental variable name as same as mentioned in step <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/2" title="GitHub Issue: squidfunk/mkdocs-material #2">#2</a>, auth_env_name .
-    &gt; rename the .env.dummy to .env 
     &gt; /config/.env</li>
 </ol>
 <h4 id="example_2">Example:<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
