@@ -96,14 +96,14 @@ endpoints:
 2. For each dictionary object create following keys
     - **base_url[MANDATORY]**: Complete API URL Path.
     - **method[MANDATORY]**: The HTTP request method to perform the desired action on a given resource. [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-    - **headers[OPTIONAl]**: Custom HTTP headers.
-    - **payload[OPTIONAl]** Request payload.
-    - **params[OPTIONAl]**: Request query strings.
+    - **headers[OPTIONAL]**: Custom HTTP headers.
+    - **payload[OPTIONAL]** Request payload.
+    - **params[OPTIONAL]**: Request query strings.
     - **auth_type[MANDATORY]**: To access the resources, choose one of the following authentication types. 
             - NO-AUTH
             - BASIC
             - API-KEY
-    - **auth_env_name[OPTIONAl]**: The name of the authentication environment variable should exactly match the name of the environment variable created in the.env file.
+    - **auth_env_name[OPTIONAL]**: The name of the authentication environment variable should exactly match the name of the environment variable created in the.env file.
 
 
 ###### Sample:
