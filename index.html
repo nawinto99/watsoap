@@ -405,14 +405,14 @@ MOCKBIN= { &quot;user_name&quot;:&quot;sample&quot;, &quot;password&quot;:&quot;
 <li>For each dictionary object create following keys<ul>
 <li><strong>base_url[MANDATORY]</strong>: Complete API URL Path.</li>
 <li><strong>method[MANDATORY]</strong>: The HTTP request method to perform the desired action on a given resource. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</a></li>
-<li><strong>headers[OPTIONAl]</strong>: Custom HTTP headers.</li>
-<li><strong>payload[OPTIONAl]</strong> Request payload.</li>
-<li><strong>params[OPTIONAl]</strong>: Request query strings.</li>
+<li><strong>headers[OPTIONAL]</strong>: Custom HTTP headers.</li>
+<li><strong>payload[OPTIONAL]</strong> Request payload.</li>
+<li><strong>params[OPTIONAL]</strong>: Request query strings.</li>
 <li><strong>auth_type[MANDATORY]</strong>: To access the resources, choose one of the following authentication types. 
         - NO-AUTH
         - BASIC
         - API-KEY</li>
-<li><strong>auth_env_name[OPTIONAl]</strong>: The name of the authentication environment variable should exactly match the name of the environment variable created in the.env file.</li>
+<li><strong>auth_env_name[OPTIONAL]</strong>: The name of the authentication environment variable should exactly match the name of the environment variable created in the.env file.</li>
 </ul>
 </li>
 </ol>
