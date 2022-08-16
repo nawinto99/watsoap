@@ -8,7 +8,7 @@ WATSOAP (What's The Status Of API) is a API health-checking monitoring tool
 
 
 # Purpose
-The purpose of this tool is to automatically monitor the health of APIs. Manually monitoring the health of APIs is a time-consuming and painful task.
+The purpose of this tool is to automatically monitor the health of APIs. Monitoring the health of APIs manually is a time-consuming and painful task. Watsoap is an open-source tool that returns the operational status of API endpoints and connection times on a regular basis. It is a free, simple tool that saves you time and money.
 
 # Features
 - Collects the current health status of configured APIs.
@@ -67,18 +67,6 @@ HEALTH_REPORT_LOCATION: ~/logs/watsoap/
 HEALTH_REPORT_TYPE: CSV
 ```
 
-### Update **.env**
-1. The names of the environmental variables must be distinct.
-2. It is recommended to use capital letters and underscores for separate words.
-
-###### Sample:
-```
-DOMAIN=example.org
-ADMIN_EMAIL=admin@${DOMAIN}
-BASIC_AUTH_GENERIC= { "user_name":"dummy_user", "password":"dummypassword"}
-MOCKBIN= { "user_name":"sample", "password":"sample"}
-
-```
 ### Update **requests.yml**
 1. Create the list and map key name as **endpoints** .
 2. The name of the request should be unique in the list.
@@ -91,6 +79,20 @@ endpoints:
   - MOCKBIN
   - JSON_PLACE_HOLDER
 ```
+
+### Update **.env**
+1. The names of the environmental variables must be distinct.
+2. It is recommended to use capital letters and underscores for separate words.
+
+###### Sample:
+```
+DOMAIN=example.org
+ADMIN_EMAIL=admin@${DOMAIN}
+BASIC_AUTH_GENERIC= { "user_name":"dummy_user", "password":"dummypassword"}
+MOCKBIN= { "user_name":"sample", "password":"sample"}
+
+```
+
 ### Update **requests_data.yml**
 1. Create one dictionary object for each request, and the map key name should exactly match with the request name.
 2. For each dictionary object create following keys
