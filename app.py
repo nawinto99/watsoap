@@ -10,16 +10,17 @@ from watsoap.main import start
 def load_env(config_dir):
     response = None
     try:
-        env_config = dotenv_values(config_dir+"/.env")
+        env_config = dotenv_values(config_dir + "/.env")
         response = json.loads(json.dumps(env_config, indent=4))
     except:
         raise
     return response
 
+
 def load_app_config(config_dir):
     response = None
     try:
-        with open(config_dir+"/config.yml") as file:
+        with open(config_dir + "/config.yml") as file:
             try:
                 response = yaml.safe_load(file)
             except:
